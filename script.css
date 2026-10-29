@@ -1,0 +1,19 @@
+// JavaScript for handling form submission interactions dynamically
+document.addEventListener("DOMContentLoaded", () => {
+    const contactForm = document.getElementById("contactForm");
+
+    if (contactForm) {
+        contactForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            
+            // Grab user input values
+            const name = document.getElementById("userName").value;
+            
+            // Dynamic confirmation alert
+            alert(`Thank you, ${name}! Your message has been captured. (Frontend JavaScript is active and running successfully).`);
+            
+            // Reset form fields
+            contactForm.reset();
+        });
+    }
+});
